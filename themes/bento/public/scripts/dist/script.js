@@ -253,16 +253,15 @@ $(function() {
         function generateHoverHTML(d) {
             var day = new moment(d.date),
                 data = d.data,
-                htmlArr = ['<h4 class="title">', day.format('ddd DD MMM'), '</h4>',
-                    '<p>', data.length,' listed event', data.length > 1 ? 's' : '', '</p>'];
+                htmlArr = ['<h4 class="title tooltipTitle">', day.format('ddd DD MMM'), '</h4>',
+                    '<p class="tooltipEventCount">', data.length,' listed event', data.length > 1 ? 's' : '', '</p>'];
 
             data.forEach(function(event) {
                 var time = new moment(event.startTime);
 
-                console.log(event);
-                htmlArr.push('<div>',
-                        '<span>', time.format('Ha'), '</span>',
-                        '<span>', event.title, '</span>',
+                htmlArr.push('<div class="tooltipEvent">',
+                        '<span class="tooltipEvent-time">', time.format('ha'), '</span>',
+                        '<span class="tooltipEvent-name">', event.title, '</span>',
                     '</div>');
             });
 
@@ -290,7 +289,8 @@ $(function() {
 
         var tip = d3.tip()
             .attr('class', 'd3-tip')
-            .offset([-10, 0])
+            .offset([10, 0])
+            .direction('s')
             .html(generateHoverHTML);
 
         svg.call(tip);
@@ -319,8 +319,14 @@ $(function() {
             // monthData.width / monthData.count / 2 => offset the axis by half a bar to get the axis dashes in the right place
             .attr('transform', 'translate(' + barOffset + ', 0)')
             .attr('class', 'graphBar')
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .on('click', function(d) {
+                /* On the graph bar click, hide all tooltips and show this single one.
+                 * We need this because each month is their own graph with it's own tooltip
+                 * control but we want a single tooltip to show at once.
+                 */
+                $('.d3-tip').css('opacity', 0);
+                tip.show(d);
+            });
 
         // Create the x axis
         // containerElHeight - lineHeight => makes room for the label the label sits
@@ -351,7 +357,6 @@ $(function() {
             .attr('transform', 'translate(' + (monthData.width / 2) + ' ,' + containerElHeight +')')
             .style('text-anchor', 'middle')
             .text(monthData.label);
-
     }
 
     /* Actually utlise all the functions above and create the graphs */

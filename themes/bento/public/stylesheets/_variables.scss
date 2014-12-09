@@ -11,6 +11,7 @@
  * Sources Grid..........The grid event sources
  * Buttons...............Button styling
  * Graphs................Graph layout details
+ * Tooltips..............Tooltips for the graph items
  * Mobile................Any mobile specific details that don't fit under the categories above
  */
 
@@ -111,6 +112,13 @@ $buttonPrimaryText: #fff;
     #GRAPHS
 \*------------------------------------*/
 $graphHeight: 60px;
+
+/*------------------------------------*\
+    #TOOLTIPS
+\*------------------------------------*/
+$tooltipWidth: 260px;
+$tooltipEventMargin: 10px;
+$tooltipTimeWidth: 40px;
 
 /*------------------------------------*\
     #MOBILE

@@ -1,0 +1,81 @@
+/**
+ * CONTENTS
+ *
+ * Base..................The D3 tip base component
+ * Day info..............The date and the number of events on for that day
+ * Event.................Individual event details
+ */
+
+/*------------------------------------*\
+    #BASE
+
+    1.  Puts a wee triangle at the top of the tooltip
+\*------------------------------------*/
+.d3-tip {
+    background-color: #fff;
+    border-radius: $borderRadius;
+    box-shadow: 0px 1px 2px 0px $text;
+    max-width: $tooltipWidth;
+
+    &:after { /* 1. */
+        color: #fff;
+        content: "\25B2";
+        display: inline;
+        font-size: $bodyTextSize;
+        line-height: 1;
+        position: absolute;
+        text-align: center;
+        top: -10px;
+        width: 100%;
+    }
+}
+
+/*------------------------------------*\
+    #DAY INFO
+\*------------------------------------*/
+
+.tooltipTitle {
+    border: none;
+    text-align: center;
+}
+
+.tooltipEventCount {
+    color: $secondary;
+    font-size: $bodyTextSize - 1;
+    margin-top: 0;
+    text-align: center;
+}
+
+/*------------------------------------*\
+    #EVENT
+
+    1.  Make the name take up the rest of the tooltip width after taking into consideration
+        the margins and time width
+\*------------------------------------*/
+
+.tooltipEvent {
+    border-top: 1px solid $secondary;
+    font-size: $bodyTextSize - 1;
+    margin: 0 $tooltipEventMargin;
+    overflow: hidden;
+    padding: $tooltipEventMargin 0;
+}
+
+%tooltip-details {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.tooltipEvent-time {
+    @extend %tooltip-details;
+    margin: 0 $tooltipEventMargin;
+    width: $tooltipTimeWidth;
+}
+
+.tooltipEvent-name {
+    @extend %tooltip-details;
+    color: $primary;
+    text-overflow: ellipsis;
+    width: $tooltipWidth - ($tooltipEventMargin * 4) - $tooltipTimeWidth; /* 1. */
+    white-space: nowrap;
+}

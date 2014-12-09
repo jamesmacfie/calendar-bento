@@ -185,6 +185,7 @@ table {
  * Sources Grid..........The grid event sources
  * Buttons...............Button styling
  * Graphs................Graph layout details
+ * Tooltips..............Tooltips for the graph items
  * Mobile................Any mobile specific details that don't fit under the categories above
  */
 /*------------------------------------*\
@@ -216,6 +217,9 @@ table {
 \*------------------------------------*/
 /*------------------------------------*\
     #GRAPHS
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLTIPS
 \*------------------------------------*/
 /*------------------------------------*\
     #MOBILE
@@ -704,6 +708,10 @@ h3 {
   font-size: 18px;
 }
 
+h4 {
+  font-size: 14px;
+}
+
 p {
   font-size: 14px;
 }
@@ -1089,68 +1097,6 @@ p {
 /**
  * CONTENTS
  *
- * Holder................Any container specific styles we need
- * Scroller..............The element that makes the graph holder x-scroll on small screens
- * Axis..................Details to do with the resulting SVG axis
- */
-/*------------------------------------*\
-    #HOLDER
-\*------------------------------------*/
-.graphHolder {
-  height: 60px;
-  width: 940px;
-}
-
-@media (max-width: 940px) {
-  .graphHolder {
-    margin-top: 32px;
-  }
-}
-/*------------------------------------*\
-    #SCROLLER
-\*------------------------------------*/
-.graphScroller {
-  overflow: hidden;
-  overflow-x: scroll;
-}
-
-/*------------------------------------*\
-    #AXIS
-
-    1.  Again, I'm not a fan of nesting here. However, all of this is so tied to the d3 script
-        that extensibility is kind of a sore topic anyway.
-    2.  The graph is currently only used in the header. I'll assume colours for this here based
-        on the comment for 1.
-\*------------------------------------*/
-.graphDivider {
-  stroke: #f85d41;
-  /* 2. */
-}
-
-.axis line, .axis path {
-  /* 1. */
-  fill: none;
-  shape-rendering: crispEdges;
-  stroke: #f85d41;
-  /* 2. */
-}
-.axis text {
-  display: none;
-}
-
-.axis-hideTicks .tick {
-  display: none;
-}
-
-.axisLabel {
-  fill: #fff;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-/**
- * CONTENTS
- *
  * Text..................Text styles that are only relevant to the events
  * Line item.............Lineitem layout
  * Line item details.....Styling of meta data within a line item
@@ -1328,6 +1274,146 @@ p {
 \*------------------------------------*/
 .subText {
   padding-top: 52.5px;
+}
+
+/**
+ * CONTENTS
+ *
+ * Holder................Any container specific styles we need
+ * Scroller..............The element that makes the graph holder x-scroll on small screens
+ * Axis..................Details to do with the resulting SVG axis
+ */
+/*------------------------------------*\
+    #HOLDER
+\*------------------------------------*/
+.graphHolder {
+  height: 60px;
+  width: 940px;
+}
+
+@media (max-width: 940px) {
+  .graphHolder {
+    margin-top: 32px;
+  }
+}
+/*------------------------------------*\
+    #SCROLLER
+\*------------------------------------*/
+.graphScroller {
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+/*------------------------------------*\
+    #AXIS
+
+    1.  Again, I'm not a fan of nesting here. However, all of this is so tied to the d3 script
+        that extensibility is kind of a sore topic anyway.
+    2.  The graph is currently only used in the header. I'll assume colours for this here based
+        on the comment for 1.
+\*------------------------------------*/
+.graphDivider {
+  stroke: #f85d41;
+  /* 2. */
+}
+
+.axis line, .axis path {
+  /* 1. */
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: #f85d41;
+  /* 2. */
+}
+.axis text {
+  display: none;
+}
+
+.axis-hideTicks .tick {
+  display: none;
+}
+
+.axisLabel {
+  fill: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/**
+ * CONTENTS
+ *
+ * Base..................The D3 tip base component
+ * Day info..............The date and the number of events on for that day
+ * Event.................Individual event details
+ */
+/*------------------------------------*\
+    #BASE
+
+    1.  Puts a wee triangle at the top of the tooltip
+\*------------------------------------*/
+.d3-tip {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px 0px #232323;
+  max-width: 260px;
+}
+.d3-tip:after {
+  /* 1. */
+  color: #fff;
+  content: "\25B2";
+  display: inline;
+  font-size: 14px;
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  width: 100%;
+}
+
+/*------------------------------------*\
+    #DAY INFO
+\*------------------------------------*/
+.tooltipTitle {
+  border: none;
+  text-align: center;
+}
+
+.tooltipEventCount {
+  color: #ccc;
+  font-size: 13px;
+  margin-top: 0;
+  text-align: center;
+}
+
+/*------------------------------------*\
+    #EVENT
+
+    1.  Make the name take up the rest of the tooltip width after taking into consideration
+        the margins and time width
+\*------------------------------------*/
+.tooltipEvent {
+  border-top: 1px solid #ccc;
+  font-size: 13px;
+  margin: 0 10px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.tooltipEvent-time, .tooltipEvent-name {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.tooltipEvent-time {
+  margin: 0 10px;
+  width: 40px;
+}
+
+.tooltipEvent-name {
+  color: #e52a08;
+  text-overflow: ellipsis;
+  width: 180px;
+  /* 1. */
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=styles.css.map */
