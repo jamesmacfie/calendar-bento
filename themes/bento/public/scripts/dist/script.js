@@ -249,6 +249,26 @@ $(function() {
             return d.date;
         }
 
+        /* Generates the HTML for a day's tooltip */
+        function generateHoverHTML(d) {
+            var day = new moment(d.date),
+                data = d.data,
+                htmlArr = ['<h4 class="title">', day.format('ddd DD MMM'), '</h4>',
+                    '<p>', data.length,' listed event', data.length > 1 ? 's' : '', '</p>'];
+
+            data.forEach(function(event) {
+                var time = new moment(event.startTime);
+
+                console.log(event);
+                htmlArr.push('<div>',
+                        '<span>', time.format('Ha'), '</span>',
+                        '<span>', event.title, '</span>',
+                    '</div>');
+            });
+
+            return htmlArr.join('');
+        }
+
         var margin = 6,			// Top margin for the bars
             lineHeight = 20,	// The space we want for the label
             maxY = 9,
@@ -268,12 +288,20 @@ $(function() {
 
         var svg = d3.select($containerEl[0]).append('svg');
 
+        var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(generateHoverHTML);
+
+        svg.call(tip);
+
         // Set our dimensions up for this month
         svg.attr('width', monthData.width)
             .attr('style', 'left: ' + monthData.offset + 'px')
             .attr('height', containerElHeight)
             .attr('class', 'eventGraph')
             .append('g');
+
 
         // Create the individual bars for the graph
         svg.selectAll('rect')
@@ -290,7 +318,9 @@ $(function() {
             .attr('height', function(d) { return y(d.count) || 0; })
             // monthData.width / monthData.count / 2 => offset the axis by half a bar to get the axis dashes in the right place
             .attr('transform', 'translate(' + barOffset + ', 0)')
-            .attr('class', 'graphBar');
+            .attr('class', 'graphBar')
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
 
         // Create the x axis
         // containerElHeight - lineHeight => makes room for the label the label sits
