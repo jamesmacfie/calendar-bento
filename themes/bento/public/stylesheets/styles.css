@@ -1157,7 +1157,7 @@ p {
  * Subtext...............Info that sits right down the bottom of the page
  */
 /*------------------------------------*\
-    #TEXT
+		#TEXT
 \*------------------------------------*/
 .title {
   font-family: helvetica, arial, sans-serif;
@@ -1168,7 +1168,7 @@ p {
 }
 
 /*-------------------------------------*\
-    #MONTH OF EVENTS
+		#MONTH OF EVENTS
 \*-------------------------------------*/
 .monthEvents {
   padding: 0;
@@ -1180,24 +1180,26 @@ p {
 }
 
 /*------------------------------------*\
-    #LINE ITEMS
+		#LINE ITEMS
 
-    The line items are each of the individual calendar events.
+		The line items are each of the individual calendar events.
 
-    Everything here is absolutely positioned so that, if need be, we can change the
-    HTML structure for the benefit of users with screen readers but can keep the
-    visuals looking accurate for those without
+		Everything here is absolutely positioned so that, if need be, we can change the
+		HTML structure for the benefit of users with screen readers but can keep the
+		visuals looking accurate for those without
 
-    1.  Normally we shouldn't nest things like this (or style an element tag) but I think
-        given the layout we have, this is going to be fine.
-    2.  Given our text and height data, what's the correct spacing.
-    3.  We want any links within a line item to take up the entire parent container.
+		1.  Normally we shouldn't nest things like this (or style an element tag) but I think
+				given the layout we have, this is going to be fine.
+		2.  Given our text and height data, what's the correct spacing.
+		3.  We want any links within a line item to take up the entire parent container.
 \*------------------------------------*/
 .lineItemHolder {
   border-bottom: 1px solid gray;
 }
 
 .lineItem {
+  color: #232323;
+  display: block;
   font-size: 14px;
   height: 50px;
   overflow: auto;
@@ -1207,16 +1209,14 @@ p {
   border-bottom: none !important;
   /* Overriding the specificity of the .lineItem-* classes. */
 }
-.lineItem:hover {
+.lineItem:hover, .lineItem:focus, .lineItem:active {
   background-color: #e52a08;
 }
-.lineItem:hover a, .lineItem:hover span {
+.lineItem:hover span, .lineItem:focus span, .lineItem:active span {
+  border-bottom: none;
   color: #fff;
 }
-.lineItem:hover span {
-  border-bottom: none;
-}
-.lineItem span, .lineItem a {
+.lineItem span {
   /* 1. */
   overflow: hidden;
   position: absolute;

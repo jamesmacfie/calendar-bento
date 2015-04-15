@@ -8,201 +8,200 @@
  */
 
 /*------------------------------------*\
-    #TEXT
+		#TEXT
 \*------------------------------------*/
 .title {
-    font-family: $helvetica;
-    font-weight: 100;
-    margin: 0;
-    padding: 20px 0 10px 0;
-    border-bottom: 1px solid lighten($hr, 20%);
+		font-family: $helvetica;
+		font-weight: 100;
+		margin: 0;
+		padding: 20px 0 10px 0;
+		border-bottom: 1px solid lighten($hr, 20%);
 }
 
 /*-------------------------------------*\
-    #MONTH OF EVENTS
+		#MONTH OF EVENTS
 \*-------------------------------------*/
 .monthEvents {
-    padding: 0;
+		padding: 0;
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
 
 }
 
 /*------------------------------------*\
-    #LINE ITEMS
+		#LINE ITEMS
 
-    The line items are each of the individual calendar events.
+		The line items are each of the individual calendar events.
 
-    Everything here is absolutely positioned so that, if need be, we can change the
-    HTML structure for the benefit of users with screen readers but can keep the
-    visuals looking accurate for those without
+		Everything here is absolutely positioned so that, if need be, we can change the
+		HTML structure for the benefit of users with screen readers but can keep the
+		visuals looking accurate for those without
 
-    1.  Normally we shouldn't nest things like this (or style an element tag) but I think
-        given the layout we have, this is going to be fine.
-    2.  Given our text and height data, what's the correct spacing.
-    3.  We want any links within a line item to take up the entire parent container.
+		1.  Normally we shouldn't nest things like this (or style an element tag) but I think
+				given the layout we have, this is going to be fine.
+		2.  Given our text and height data, what's the correct spacing.
+		3.  We want any links within a line item to take up the entire parent container.
 \*------------------------------------*/
 
 .lineItemHolder {
-    border-bottom: 1px solid lighten($hr, 10%);
+		border-bottom: 1px solid lighten($hr, 10%);
 }
 
 .lineItem {
-    font-size: $bodyTextSize;
-    height: $eventHeight;
-    overflow: auto;
-    position: relative;
+		color: $text;
+		display: block;
+		font-size: $bodyTextSize;
+		height: $eventHeight;
+		overflow: auto;
+		position: relative;
 
-    &:last-child {
-        span {
-            border-bottom: none!important; /* Overriding the specificity of the .lineItem-* classes. */
-        }
-    }
+		&:last-child {
+				span {
+						border-bottom: none!important; /* Overriding the specificity of the .lineItem-* classes. */
+				}
+		}
 
-    &:hover {
-        background-color: $primary;
+		&:hover, &:focus, &:active {
+				background-color: $primary;
 
-        a, span {
-            color: #fff;
-        }
+				span {
+					border-bottom: none;
+					color: #fff;
+				}
+		}
 
-        span {
-            border-bottom: none;
-        }
-    }
-
-    span, a { /* 1. */
-        overflow: hidden;
-        position: absolute;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+		span { /* 1. */
+				overflow: hidden;
+				position: absolute;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+		}
 }
 
 /* Shared placedhlders for common metadata properties */
 %hasBottomBorder {
-    border-bottom: 1px solid lighten($hr, 20%);
+		border-bottom: 1px solid lighten($hr, 20%);
 }
 
 %bodyText {
-    $spacing: ($eventHeight - $bodyTextSize) / 2; /* 2. */
+		$spacing: ($eventHeight - $bodyTextSize) / 2; /* 2. */
 
-    height: ($spacing * 2)+ $bodyTextSize;
-    padding-top: $spacing;
+		height: ($spacing * 2)+ $bodyTextSize;
+		padding-top: $spacing;
 }
 
 %betaText {
-    $spacing: ($eventHeight - $betaTextSize) / 2; /* 2. */
+		$spacing: ($eventHeight - $betaTextSize) / 2; /* 2. */
 
-    font-family: $megaphone;
-    font-size: $betaTextSize;
-    height: ($spacing * 2) + $betaTextSize;
-    padding-top: ($betaTextSize / 2) - 3;
+		font-family: $megaphone;
+		font-size: $betaTextSize;
+		height: ($spacing * 2) + $betaTextSize;
+		padding-top: ($betaTextSize / 2) - 3;
 }
 
 .lineItem-day {
-    @extend %bodyText;
+		@extend %bodyText;
 
-    left: $eventDayLeft;
-    text-align: left;
-    width: $dayPercent;
+		left: $eventDayLeft;
+		text-align: left;
+		width: $dayPercent;
 }
 
 .lineItem-date {
-    @extend %bodyText;
+		@extend %bodyText;
 
-    left: $dayPercent;
-    text-align: left;
-    width: $datePercent;
+		left: $dayPercent;
+		text-align: left;
+		width: $datePercent;
 }
 
 .lineItem-time {
-    @extend %bodyText;
-    @extend %hasBottomBorder;
+		@extend %bodyText;
+		@extend %hasBottomBorder;
 
-    left: $dayPercent + $datePercent;
-    width: $timePercent;
+		left: $dayPercent + $datePercent;
+		width: $timePercent;
 }
 
 .lineItem-group {
-    @extend %betaText;
-    @extend %hasBottomBorder;
+		@extend %betaText;
+		@extend %hasBottomBorder;
 
-    left: $dayPercent + $datePercent + $timePercent;
-    width: $groupPercent;
+		left: $dayPercent + $datePercent + $timePercent;
+		width: $groupPercent;
 }
 
 .lineItem-title {
-    @extend %bodyText;
-    @extend %hasBottomBorder;
+		@extend %bodyText;
+		@extend %hasBottomBorder;
 
-    left: $dayPercent + $datePercent + $timePercent + $groupPercent;
-    padding-right: $titleRightPaddingPercent;
-    width: $titlePercent;
+		left: $dayPercent + $datePercent + $timePercent + $groupPercent;
+		padding-right: $titleRightPaddingPercent;
+		width: $titlePercent;
 }
 
 .lineItem-location {
-    @extend %bodyText;
-    @extend %hasBottomBorder;
+		@extend %bodyText;
+		@extend %hasBottomBorder;
 
-    left: $dayPercent + $datePercent + $timePercent + $groupPercent + $titlePercent;
-    padding-right: 15px;
-    text-align: right;
-    width: $locationPercent;
+		left: $dayPercent + $datePercent + $timePercent + $groupPercent + $titlePercent;
+		padding-right: 15px;
+		text-align: right;
+		width: $locationPercent;
 }
 
 .lineItem-link {
-    display: block; /* 3. */
-    height: 100%;
-    width: 100%;
+		display: block; /* 3. */
+		height: 100%;
+		width: 100%;
 }
 
 @media (max-width: $tabletWidth) {
-  .lineItem {
-      height: $eventHeightMobile;
-  }
+	.lineItem {
+			height: $eventHeightMobile;
+	}
 
-  .lineItem-day {
-      width: $dayPercentMobile;
-  }
+	.lineItem-day {
+			width: $dayPercentMobile;
+	}
 
-  .lineItem-date {
-      left: $dayPercentMobile;
-      width: $datePercentMobile;
-  }
+	.lineItem-date {
+			left: $dayPercentMobile;
+			width: $datePercentMobile;
+	}
 
-  .lineItem-time {
-      border-bottom: none;
-      left: $dayPercentMobile + $datePercentMobile;
-      width: $timePercentMobile;
-  }
+	.lineItem-time {
+			border-bottom: none;
+			left: $dayPercentMobile + $datePercentMobile;
+			width: $timePercentMobile;
+	}
 
-  .lineItem-group {
-      border-bottom: none;
-      left: $dayPercentMobile + $datePercentMobile + $timePercentMobile;
-      width: $groupPercentMobile;
-  }
+	.lineItem-group {
+			border-bottom: none;
+			left: $dayPercentMobile + $datePercentMobile + $timePercentMobile;
+			width: $groupPercentMobile;
+	}
 
-  .lineItem-title {
-      left: $dayPercentMobile + $dayPercentMobile;
-      top: $eventHeight;
-      width: $titlePercentMobile;
-  }
+	.lineItem-title {
+			left: $dayPercentMobile + $dayPercentMobile;
+			top: $eventHeight;
+			width: $titlePercentMobile;
+	}
 
-  .lineItem-location {
-      left: $dayPercentMobile + $dayPercentMobile + $titlePercentMobile;
-      top: $eventHeight;
-      width: $locationPercentMobile;
-  }
+	.lineItem-location {
+			left: $dayPercentMobile + $dayPercentMobile + $titlePercentMobile;
+			top: $eventHeight;
+			width: $locationPercentMobile;
+	}
 }
 
 /*------------------------------------*\
 #SUBTEXT
 \*------------------------------------*/
 .subText {
-    padding-top: $mainBottomPadding * 1.5;
+		padding-top: $mainBottomPadding * 1.5;
 }

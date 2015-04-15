@@ -2,11 +2,11 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<title>Upcoming events – Event Calendar</title>
-  	<link rel="stylesheet" href="public/stylesheets/styles.css">
+		<link rel="stylesheet" href="public/stylesheets/styles.css">
 
-  	<!--[if lt IE 9]>
-  		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  	<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 	<body>
 
 	<header class="header" role="banner">
@@ -21,78 +21,9 @@
 		</div>
 	</header>
 
-	<main class="l-mainContent" id="section-design" role="main" aria-labelledby="calender-label">
-		<section>
-			<h2 class="title">September</h2>
-			<div class="lineItemHolder">
-				<div class="lineItem">
-					<span class="lineItem-day">Tue</span>
-					<span class="lineItem-date">12<span class="u-hidden">September</span></span>
-					<span class="lineItem-time">6pm</span>
-					<span class="lineItem-group"><a href="#" class="lineItem-link">CSS Meetup</a></span>
-					<span class="lineItem-title">Wellington .NET User Group: Nuts and bolts of a real world application with John Rusk</span>
-					<span class="lineItem-location">Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz</span>
-				</div>
-			</div>
-			<div class="lineItemHolder">
-				<div class="lineItem">
-					<span class="lineItem-day">Thu</span>
-					<span class="lineItem-date">14 <span class="u-hidden">September</span></span>
-					<span class="lineItem-time">8am</span>
-					<span class="lineItem-group"><a href="#" class="lineItem-link">Design & Thinking</a></span>
-					<span class="lineItem-title">Let's meet up and chat about design</span>
-					<span class="lineItem-location">Trade Kitchen</span>
-				</div>
-				<div class="lineItem">
-					<span class="lineItem-day u-hidden">Thu</span>
-					<span class="lineItem-date u-hidden">14 <span class="u-hidden">September</span></span>
-					<span class="lineItem-time">6:30pm</span>
-					<span class="lineItem-group"><a href="#" class="lineItem-link">UX Wellington</a></span>
-					<span class="lineItem-title">Service Design Special</span>
-					<span class="lineItem-location">One Red Dog</span>
-				</div>
-				<div class="lineItem">
-					<span class="lineItem-day u-hidden">Thu</span>
-					<span class="lineItem-date u-hidden">14 <span class="u-hidden">September</span></span>
-					<span class="lineItem-time">8pm</span>
-					<span class="lineItem-group"><a href="#" class="lineItem-link">Design Cinema</a></span>
-					<span class="lineItem-title">Indie Game: The Movie</span>
-					<span class="lineItem-location">Light House Cuba</span>
-				</div>
-			</div>
-			<div class="lineItemHolder">
-				<div class="lineItem">
-					<span class="lineItem-day">Tue</span>
-					<span class="lineItem-date">19<span class="u-hidden">September</span></span>
-					<span class="lineItem-time">6:30pm</span>
-					<span class="lineItem-group"><a href="#" class="lineItem-link">Creative Tools Meetup</a></span>
-					<span class="lineItem-title">InDesign 101 - 102</span>
-					<span class="lineItem-location">Youbee School</span>
-				</div>
-				<div class="lineItem">
-					<span class="lineItem-day u-hidden">Tue</span>
-					<span class="lineItem-date u-hidden">19<span class="u-hidden">September</span></span>
-					<span class="lineItem-time">6pm</span>
-					<span class="lineItem-group"><a href="#" class="lineItem-link">UX Bookclub</a></span>
-					<span class="lineItem-title">Don't Make Me Think: Steve Krug</span>
-					<span class="lineItem-location">Southern Cross</span>
-				</div>
-			</div>
-			<div class="lineItemHolder">
-				<div class="lineItem">
-					<span class="lineItem-day">Mon</span>
-					<span class="lineItem-date">25<span class="u-hidden">September</span></span>
-					<span class="lineItem-time">8pm</span>
-					<span class="lineItem-group"><a href="#" class="lineItem-link">Design Cinema</a></span>
-					<span class="lineItem-title">PressPausePlay</span>
-					<span class="lineItem-location">Light House Cuba</span>
-				</div>
-			</div>
-		</section>
+	<main class="l-mainContent"role="main" aria-labelledby="calender-label">
+		<div id="content">
 
-		<div class="subText">
-			<p>That's it! Those are all the design events currently listed.</p>
-			<p>Check back whenever for updates.</p>
 		</div>
 	</main>
 
@@ -106,107 +37,883 @@
 
 
 				<fieldset class="sources js-source">
-					<legend class="sourcesTitle" aria-live="polite">Sources <span class="sourcesSelected js-sourceTotalCount">(7 of 9 selected)</span></legend>
+					<legend class="sourcesTitle" aria-live="polite">Sources <span class="sourcesSelected js-sourceTotalCount"></span></legend>
 					<input type="checkbox" id="allSources" class="u-hidden sourcesCheck js-sourceTotalCheck" checked="checked">
 					<span class="sourcesCheckDisplay sourcesCheckDisplay-circle"></span>
 					<label class="sourcesLabel" for="allSources"><strong>All sources</strong></label>
-					<div class="pure-g sourcesGrid" id="sourceTemplateContainer">
-						<div id="sourceTemplate">
-							<div class="pure-u-1-3 sourcesGridCell">
-								<input type="checkbox" id="{{formattedName}}" class="u-hidden sourcesCheck js-sourceCheck" checked="checked">
-								<span class="sourcesCheckDisplay"></span>
-								<label class="sourcesLabel" for="{{formattedName}}">{{name}}</label>
-							</div>
-						</div>
+					<div class="pure-g sourcesGrid" id="sourceContent">
 					</div>
 				</fieldset>
 
 			</div>
 			<footer class="modalFooter">
 				<div class="modalFooter--buttonHolder">
-					<button class="button button-primary">Update</button>
+					<button class="button button-primary" id="close-section-customise">Update</button>
 					<button class="button button-secondary js-closeDialog" aria-controls="section-customise">Cancel</button>
 				</div>
 			</footer>
 		</div>
 	</section>
 
-	<script src="public/scripts/dist/libs.js"></script>
-	<script src="public/scripts/dist/script.js"></script>
-
 	<script>
 		window.CAL = {
-  "eventSources": [
-    {
-      "name": "Wellington APPS Photography Meetup Group",
-      "url": "http://www.meetup.com/WellingtonPhotographyMeetupGroup",
-      "events": []
-    },
-    {
-      "name": "Wellington .NET User Group",
-      "url": "http://www.meetup.com/WelliDotNet",
-      "events": [
-        {
-          "title": "Wellington .NET User Group: Nuts and bolts of a real world application with John Rusk",
-          "startTime": "2014-11-19T18:00:00+13:00",
-          "endTime": "2014-11-19T21:00:00+13:00",
-          "description": "<p>In November 2013, the OSPRI Disease Management System went live. It's essential to OSPRI New Zealand's world-leading success in eradicating Bovine Tuberculosis. The project won IT Project Excellence and Software Excellence categories at IITP's 2014 Excellence in IT Awards.</p> <p>John will talk about some of the key technical lessons learned during the project, such as:</p> <p><b>.NET Architecture</b></p> <p>Where does the business logic go?  The Domain Model , the Service Layer, a little of both, or somewhere else? Here’s what we did and how it worked out.</p> <p>The dark side of ASP.NET MVC.</p> <p><b>Handy SQL Server Techniques</b></p> <p>Using Row Versioning and the Resource Governor to safely support long-running queries, such as reports, on your production database.</p> <p>A quick overview of ubiquitous change auditing, and the \"magic\" compression of Clustered Columnstores.</p> <p><b>Testing and testability</b></p> <p>Allowing your system to travel through time. Realistically test long-running business processes in just a few minutes.</p> <p>Enforcing coding conventions with unit tests. These tests use reflection to look inside the implementation of methods, and assert that coding rules have been followed.</p>",
-          "location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
-          "url": "http://www.meetup.com/WelliDotNet/events/205897852/"
-        },
-        {
-          "title": "Wellington .NET User Group: BizTalk 2013 R2 with RESTful service and JSON support with Sooraj Payyoormana",
-          "startTime": "2014-11-26T18:00:00+13:00",
-          "endTime": "2014-11-26T21:00:00+13:00",
-          "description": "<p>The \"WCF-WebHttp\" adapter came with the BizTalk 2013 R2 will support both on-premises and cloud-based integration scenarios. The new JSON pipeline encoder and decoder enable BizTalk to send and receive JSON files. Join for this session to understand how these new additions will help us in integrating services with BizTalk .</p>",
-          "location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
-          "url": "http://www.meetup.com/WelliDotNet/events/207880362/"
-        },
-        {
-          "title": "Wellington .NET User Group: The Actor Model with Project Orleans",
-          "startTime": "2014-12-03T18:00:00+13:00",
-          "endTime": "2014-12-03T21:00:00+13:00",
-          "description": "<p>A quick introduction to developing scalable, distributed applications using the Actor Model with Microsoft's Project Orleans.</p>",
-          "location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
-          "url": "http://www.meetup.com/WelliDotNet/events/207544922/"
-        },
-        {
-          "title": "Wellington .NET User Group: Well-Secured: The Wellington Security Defender Day",
-          "startTime": "2014-12-10T10:00:00+13:00",
-          "endTime": "2014-12-10T17:00:00+13:00",
-          "description": "<p>The day before <a href=\"https://kiwicon.org/\">Kiwicon 8</a> in Wellington, we'll be having a meetup for those people involved in securing the applications developed by their company.</p> <p>Further details are available at <a href=\"http://www.well-secured.com\"><a href=\"http://www.well-secured.com\" class=\"linkified\">http://www.well-secured.com</a></a></p> <p>\n\n\nThe location will be confirmed closer to the time, depending upon attendee numbers.</p>",
-          "location": null,
-          "url": "http://www.meetup.com/WelliDotNet/events/205346102/"
-        },
-        {
-          "title": "Wellington .NET User Group: UX/Usability for Developers with Gareth Bradley",
-          "startTime": "2014-12-17T18:00:00+13:00",
-          "endTime": "2014-12-17T21:00:00+13:00",
-          "description": null,
-          "location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
-          "url": "http://www.meetup.com/WelliDotNet/events/207765282/"
-        },
-        {
-          "title": "Wellington .NET User Group: Christmas Function",
-          "startTime": "2014-12-24T18:00:00+13:00",
-          "endTime": "2014-12-24T21:00:00+13:00",
-          "description": "<p>Let's meet up for a few drinks to celebrate the year.</p>",
-          "location": null,
-          "url": "http://www.meetup.com/WelliDotNet/events/207545432/"
-        },
-        {
-          "title": "Wellington .NET User Group: Cassandra with Aaron Morton",
-          "startTime": "2015-02-18T18:00:00+13:00",
-          "endTime": "2015-02-18T21:00:00+13:00",
-          "description": "<p>Come and listen to Aaron talk about the Cassandra database platform and how it can be used by .NET clients.</p>",
-          "location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
-          "url": "http://www.meetup.com/WelliDotNet/events/207665902/"
-        }
-      ]
-    }
-  ]
+			"eventSources": [
+		{
+			"events": []
+		},
+	{
+		"name": "Wellington .NET User Group",
+		"url": "http://www.meetup.com/WelliDotNet",
+		"events": [
+	{
+		"title": "Wellington .NET User Group: Xamarin Development for a Real Client Project with Daniel McGaughran",
+		"startTime": "2015-04-01T05:00:00+00:00",
+		"endTime": "2015-04-01T08:00:00+00:00",
+		"description": "<p>In the context of a real application built for an actual client, Daniel will talk about a variety of issues, including the following:</p> <p>\n\n* Licensing and its implications<br/>* Hardware &amp; software requirements<br/>*Mobile platform conceptual models<br/>*Architectural tips &amp; lessons learned</p>",
+		"location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
+		"url": "http://www.meetup.com/WelliDotNet/events/220157794/",
+		"group": "Wellington .NET User Group",
+		"groupURL": "http://www.meetup.com/WelliDotNet",
+		"startDate": "2015-03-31T11:00:00.000Z"
+	},
+{
+	"title": "Wellington .NET User Group: The Pragmatic Programmer with Bevan Arps",
+	"startTime": "2015-05-06T06:00:00+00:00",
+	"endTime": "2015-05-06T09:00:00+00:00",
+	"description": "<p>Unusually for a technical book published in 1999, The Pragmatic Programmer (by Andy Hunt and Dave Thomas) remains thoroughly relevant to the modern developer.</p> <p>Come along and learn some of what makes this book still enlightening.</p>",
+	"location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
+	"url": "http://www.meetup.com/WelliDotNet/events/220657619/",
+	"group": "Wellington .NET User Group",
+	"groupURL": "http://www.meetup.com/WelliDotNet",
+	"startDate": "2015-05-05T12:00:00.000Z"
+},
+{
+	"title": "Wellington .NET User Group: Introduction to Orchard CMS with Stephen Heise",
+	"startTime": "2015-06-03T06:00:00+00:00",
+	"endTime": "2015-06-03T09:00:00+00:00",
+	"description": "<p>Find out a bit more about a CMS that isn't written in PHP, why you should care about it and why Microsoft has embraced software that is actually really open source. </p> <p>Stephen will be covering some of the basic Orchard concepts as well as diving into code to explore some of Orchard more interesting quirks. Strange C# tricks are afoot. Could it be that C# can be more hippy than JavaScript? Come along to find out. </p> <p>Hey, at least its not SharePoint...</p>",
+	"location": "Inov8 Ltd, Level 1, 44 Victoria Street, Wellington, nz",
+	"url": "http://www.meetup.com/WelliDotNet/events/221378962/",
+	"group": "Wellington .NET User Group",
+	"groupURL": "http://www.meetup.com/WelliDotNet",
+	"startDate": "2015-06-02T12:00:00.000Z"
+}
+]
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"name": "EdTech Wellington Meetup",
+	"url": "http://www.meetup.com/EdTech-Wellington-Meetup",
+	"events": [
+	{
+		"title": "EdTech Wellington Meetup: Reserve April 14 for our next Meetup",
+		"startTime": "2015-04-14T05:15:00+00:00",
+		"endTime": "2015-04-14T08:15:00+00:00",
+		"description": "<p>After another quality event this month we’ve fixed up two more stimulating short presentations for April, together with the usual networking.</p> <p>Come listen to Darren Gammie of Learning Focus who connects with tens of thousands of teachers each year via <a href=\"http://journalsurf.co.nz/\"><a href=\"http://journalsurf.co.nz/\" class=\"linkified\">http://journalsurf.co.nz/</a></a></p> <p>Then hear from Dan Millward of <a href=\"http://www.gamefroot.com\">www.gamefroot.com</a> about his latest exploration of where gaming meets education.</p> <p>Book yourself in – and bring a friend.</p> <p><b>Sponsor corner</b></p> <p>The wonderful Creative HQ has kindly agreed to be our regular venue &amp; beer sponsor BUT we need a pizza sponsor for our next and future meetings. This costs just $120 - for which you get a two minute pitch to an amazingly intelligent, appreciative, hungry and well connected crowd! Contact me if interested.</p>",
+		"location": "Creative HQ, Level 1, 7 Dixon Street, Te Aro, Wellington, nz",
+		"url": "http://www.meetup.com/EdTech-Wellington-Meetup/events/220901563/",
+		"group": "EdTech Wellington Meetup",
+		"groupURL": "http://www.meetup.com/EdTech-Wellington-Meetup",
+		"startDate": "2015-04-13T12:00:00.000Z"
+	}
+	]
+},
+{
+	"events": []
+},
+{
+	"name": "Enspiral Dev Academy",
+	"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+	"events": [
+	{
+		"title": "Enspiral Dev Academy: An Introduction to Carnival Mobile - Creative & Powerful Marketing at Scale",
+		"startTime": "2015-03-30T05:15:00+00:00",
+		"endTime": "2015-03-30T08:15:00+00:00",
+		"description": "<p>Come join us for our first Tech Talk in our new space!</p> <p>Sam Jarman talks about Carnival Mobile - a services company turned start up based in Wellington. </p> <p>He’ll discuss the product, users, results and then move onto the technical side, which will cover the stack and various problems solved.</p> <p><br/>Pizza and drinks from 6:15pm. Talk starts at 6:30pm. See you there!</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/221040326/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-03-29T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-03-31T05:30:00+00:00",
+		"endTime": "2015-03-31T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/221228567/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-03-30T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-04-07T06:30:00+00:00",
+		"endTime": "2015-04-07T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/221310748/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-04-06T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-08-11T06:30:00+00:00",
+		"endTime": "2015-08-11T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytlbpb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-08-10T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-08-18T06:30:00+00:00",
+		"endTime": "2015-08-18T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytlbxb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-08-17T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-08-25T06:30:00+00:00",
+		"endTime": "2015-08-25T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytlbhc/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-08-24T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-09-01T06:30:00+00:00",
+		"endTime": "2015-09-01T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytmbcb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-08-31T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-09-08T06:30:00+00:00",
+		"endTime": "2015-09-08T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytmblb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-09-07T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-09-15T06:30:00+00:00",
+		"endTime": "2015-09-15T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytmbtb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-09-14T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-09-22T06:30:00+00:00",
+		"endTime": "2015-09-22T09:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytmbdc/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-09-21T12:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-09-29T05:30:00+00:00",
+		"endTime": "2015-09-29T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytmbmc/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-09-28T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-10-06T05:30:00+00:00",
+		"endTime": "2015-10-06T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytnbjb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-10-05T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-10-13T05:30:00+00:00",
+		"endTime": "2015-10-13T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytnbrb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-10-12T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-12-15T05:30:00+00:00",
+		"endTime": "2015-12-15T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytqbtb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-12-14T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-12-22T05:30:00+00:00",
+		"endTime": "2015-12-22T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytqbdc/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-12-21T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2015-12-29T05:30:00+00:00",
+		"endTime": "2015-12-29T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflytqbmc/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2015-12-28T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2016-01-05T05:30:00+00:00",
+		"endTime": "2016-01-05T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflyvcbhb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2016-01-04T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2016-01-12T05:30:00+00:00",
+		"endTime": "2016-01-12T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflyvcbqb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2016-01-11T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2016-01-19T05:30:00+00:00",
+		"endTime": "2016-01-19T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflyvcbzb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2016-01-18T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2016-01-26T05:30:00+00:00",
+		"endTime": "2016-01-26T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflyvcbjc/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2016-01-25T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2016-02-02T05:30:00+00:00",
+		"endTime": "2016-02-02T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflyvdbdb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2016-02-01T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2016-02-09T05:30:00+00:00",
+		"endTime": "2016-02-09T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflyvdbmb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2016-02-08T11:00:00.000Z"
+	},
+	{
+		"title": "Enspiral Dev Academy: Node.js Hack Night",
+		"startTime": "2016-02-16T05:30:00+00:00",
+		"endTime": "2016-02-16T08:30:00+00:00",
+		"description": "<p>Come learn node.js with Mikey at our weekly javascript hack night! Mikey (@ahdinosaur) is an Enspiral javascript hacker who loves the art of signals and pixels. </p> <p>(ﾉ´ヮ´)ﾉ*:･ﾟ✧</p> <p><br/>This weekly hack night is for anyone who wants to learn or teach cyberwizardry using javascript! It will be primarily self-directed, with available guidance from higher level wizards. You should have basic computer skills, a computer that runs Linux or Mac OS, and feel comfortable finding information on the internet. Folks from communities that have historically been excluded from tech are very much encouraged to join!</p> <p>If you're new to node.js, we recommend starting with <a href=\"http://nodeschool.io\" class=\"linkified\">http://nodeschool.io</a> to learn base javascript magic spells. If you have a node.js project to work on, cast your spells and see what mad science emerges! If you want a project, find someone who wants help. The night is intended to be a low-stress environment to work together, get feedback on our projects, help each other get through difficult spots, and share tricks we learn. If at any point you feel lost, there will be higher level wizards available to talk to.</p> <p><br/>There are no fees for these sessions, but any koha for our wizards will be greatly appreciated ＼(＾▽＾)／</p>",
+		"location": "Enspiral Dev Academy, Level 2, 275 Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup/events/jkcmflyvdbvb/",
+		"group": "Enspiral Dev Academy",
+		"groupURL": "http://www.meetup.com/Enspiral-Dev-Academy-Meetup",
+		"startDate": "2016-02-15T11:00:00.000Z"
+	},
+	{
+		"title": "Open Coffee Club: Adam Ben-Dror on pet fish, pigeons & how designed objects challenge perceptions",
+		"startTime": "2015-03-30T20:00:00+00:00",
+		"endTime": "2015-03-30T21:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/b/7/8/600_435602936.jpeg\" /> <i>Hi guys, </i></p> <p><i>This Tue re-designer, hacker, creator <a href=\"http://ben-dror.com/pinokio/\">Adam Ben-Dror</a> is presenting about a few of his projects.</i></p> <p><i>The first explores our relationship and perceptions of pet fish and looks at what role designed objects might play in challenging these perceptions. </i></p> <p><i>The second project is ongoing and explores anthropocentric notions in relation to animals that we live with in our cities. In this case I am specifically interested in pigeons. </i></p> <p><i>Adam</i><i> is passionate about the synergy that exists between beauty and utility and creates objects that have a balance between aesthetics and functional purpose. </i></p> <p><i>Adam studied Industrial Design at Victoria University, Wellington. He spent a year studying at Carnegie Mellon University, Pittsburgh, PA where he was a member of the <a href=\"http://vpl.design.cmu.edu/people\">Visible Process Lab</a> and worked as a product designer at <a href=\"http://rockpaperrobot.com/\">RockPaperRobot</a>.</i></p> <p>Coffee, meet, be inspired!</p> <p>Cheers, </p> <p>Clem&amp;Mash</p>",
+		"location": "In Good Company, 166A Cuba Street, Wellington, nz",
+		"url": "http://www.meetup.com/Open-Coffee-Club-Meetup/events/221381844/",
+		"group": "Open Coffee Club",
+		"groupURL": "http://www.meetup.com/Open-Coffee-Club-Meetup",
+		"startDate": "2015-03-30T11:00:00.000Z"
+	}
+	]
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"name": "PHP User Group Wellington",
+	"url": "http://www.meetup.com/PHP-Usergroup-Wellington",
+	"events": [
+	{
+		"title": "PHP User Group Wellington: March Meetup - Lessons learned with testing mobile devices",
+		"startTime": "2015-03-31T05:00:00+00:00",
+		"endTime": "2015-03-31T08:00:00+00:00",
+		"description": "<p><b>Lessons learned with testing mobile devices</b> by <b>Mark Wilson</b>, Principal Consultant at <a href=\"http://www.planittesting.co.nz/\"><b>Planit Software Testing</b></a></p> <p>\n\n<b>Pizza &amp; beer</b> will be sponsored by <a href=\"https://iwantmyname.co.nz/\"><b>iwantmyname</b></a> - painless domain management. </p> <p>\n\n\nWe will be heading to <b><a href=\"http://craftersand.co/\">Crafters &amp; Co</a></b> for a drink afterwards.</p>",
+		"location": "Creative HQ, Hope Gibbons Building, 7 Dixon St, Wellington, nz",
+		"url": "http://www.meetup.com/PHP-Usergroup-Wellington/events/220196930/",
+		"group": "PHP User Group Wellington",
+		"groupURL": "http://www.meetup.com/PHP-Usergroup-Wellington",
+		"startDate": "2015-03-30T11:00:00.000Z"
+	},
+	{
+		"title": "PHP User Group Wellington: April Meetup - PayPal + Braintree, Dynatrace and Facebook",
+		"startTime": "2015-04-28T06:00:00+00:00",
+		"endTime": "2015-04-28T09:00:00+00:00",
+		"description": "<p><b>Steven Cooper</b>, <a href=\"http://braintreepayments.com\">PayPal + Braintree</a> Australia</p> <p><b>Harald Zeitlhofer, </b><a href=\"http://www.dynatrace.com/en/index.html\">Dynatrace</a> Austria</p> <p><br/><b>Hacking PHP </b>by <b>Sara Golemon </b>from <b><a href=\"https://www.linkedin.com/company/facebook?trk=ppro_cprof\">Facebook</a>,</b> USA<br/>PHP, as a language, is pushing 20 years old and in that time it's collected more than a few... peculiarities. That's why the HHVM project recently released a reimagining of the PHP language called \"Hack\". All the flexibility you're used to in PHP, coupled with progressive typing and the advanced control structures you expect from a modern language. So put down your copy of \"PHP3 Websites for Dummies\", and step into the future of server-side programming for the web.</p> <p>More info soon...</p> <p><b>Pizza &amp; beer</b> will be sponsored by <a href=\"https://iwantmyname.co.nz/\"><b>iwantmyname</b></a> - painless domain management. </p> <p><br/>---</p> <p><b>Sara Golemon</b> is an Engineer at Facebook working on HHVM and Hack, as well as a long standing core contributor to the PHP project and author of \"Extending and Embedding PHP\".<br/>Twitter: <a href=\"http://twitter.com/SaraMG\"><a href=\"http://twitter.com/SaraMG\" class=\"linkified\">http://twitter.com/SaraMG</a></a><br/>Flickr: <a href=\"https://www.flickr.com/photos/pollita/5088556431\"><a href=\"https://www.flickr.com/photos/pollita/5088556431\" class=\"linkified\">https://www.flickr.com/photos/pollita/5088556431</a></a></p>",
+		"location": "Southern Cross, 39 Abel Smith Street, Te Aro , Wellington, nz",
+		"url": "http://www.meetup.com/PHP-Usergroup-Wellington/events/219949015/",
+		"group": "PHP User Group Wellington",
+		"groupURL": "http://www.meetup.com/PHP-Usergroup-Wellington",
+		"startDate": "2015-04-27T12:00:00.000Z"
+	}
+	]
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"name": "New Zealand Python User Group - Wellington",
+	"url": "http://www.meetup.com/NZPUG-Wellington",
+	"events": [
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-04-09T06:00:00+00:00",
+		"endTime": "2015-04-09T09:00:00+00:00",
+		"description": "<p>Aaron Barnes: <i>\"Making Go-Karts go faster with Tornado\"</i></p> <p><br/>TBC: Matthew, <i>\"Introducing docker into your programming workflow\"</i></p> <p><br/>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/220926255/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-04-08T12:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-05-14T06:00:00+00:00",
+		"endTime": "2015-05-14T09:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjythbsb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-05-13T12:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-06-11T06:00:00+00:00",
+		"endTime": "2015-06-11T09:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/220926332/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-06-10T12:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-07-09T06:00:00+00:00",
+		"endTime": "2015-07-09T09:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/220926341/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-07-08T12:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-08-13T06:00:00+00:00",
+		"endTime": "2015-08-13T09:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjytlbrb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-08-12T12:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-09-10T06:00:00+00:00",
+		"endTime": "2015-09-10T09:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjytmbnb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-09-09T12:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-10-08T05:00:00+00:00",
+		"endTime": "2015-10-08T08:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjytnblb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-10-07T11:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-11-12T05:00:00+00:00",
+		"endTime": "2015-11-12T08:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjytpbqb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-11-11T11:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2015-12-10T05:00:00+00:00",
+		"endTime": "2015-12-10T08:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjytqbnb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2015-12-09T11:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2016-01-14T05:00:00+00:00",
+		"endTime": "2016-01-14T08:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjyvcbsb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2016-01-13T11:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2016-02-11T05:00:00+00:00",
+		"endTime": "2016-02-11T08:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjyvdbpb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2016-02-10T11:00:00.000Z"
+	},
+	{
+		"title": "New Zealand Python User Group - Wellington: Wellington Python Meetup",
+		"startTime": "2016-03-10T05:00:00+00:00",
+		"endTime": "2016-03-10T08:00:00+00:00",
+		"description": "<p>Python talks! Python people! Discussions from how to start learning Python through to debugging your robot pirate spaceship avionics controller library. Or whatever. There is also pizza, and sometimes spare beer.</p>",
+		"location": "Level 3 meeting space, Catalyst House, 150 Willis Street, Wellington, nz",
+		"url": "http://www.meetup.com/NZPUG-Wellington/events/qsrzrjyvfbnb/",
+		"group": "New Zealand Python User Group - Wellington",
+		"groupURL": "http://www.meetup.com/NZPUG-Wellington",
+		"startDate": "2016-03-09T11:00:00.000Z"
+	}
+	]
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"name": "Test Professionals Network, Wellington",
+	"url": "http://www.meetup.com/Test-Professionals-Network-Wellington",
+	"events": [
+	{
+		"title": "Test Professionals Network, Wellington: Automation Testing (A Functional Perspective) - Abhijeet Singh",
+		"startTime": "2015-03-31T04:00:00+00:00",
+		"endTime": "2015-03-31T06:00:00+00:00",
+		"description": "<p>Wellington Test Professionals Network presents</p> <p>\n\nAutomation Testing (A Functional Perspective) - Abhijeet Singh </p> <p>\n\n\n\nIn this talk, we will explore what automation testing is all about, and how it compliments manual functional testing. How automation testers can work closely with the manual functional test team, and:</p> <p>\n\n - Help them to reduce their effort, and </p> <p>\n\n - In turn, get the expertise from the manual functional test team to create more effective and more efficient automated tests</p> <p>\n\n\n\nBased on his own experiences, Abhijeet will demonstrate a few instances where using automation tests are extremely helpful to the manual functional test team. </p> <p>\n\n\n\nThe presentation will be followed by a networking session with drinks and nibbles provided by TPN.</p> <p>\n\nAbout The Speaker</p> <p>\n\nAbhijeet is a passionate automation tester, and likes to explore new innovative ways to implement automation testing. He has experience in implementing various frameworks in QTP/UFT on large projects for various Banks.  He is currently working with Infosys for Westpac NZ in their automation team, and is working on developing a new automation framework that collaborates well with the manual functional test team. </p> <p>\n\n       </p> <p>\n\nTPN wish to thank TPN for sponsoring the refreshments.</p> <p>\n\n     </p> <p>\n\nTPN wish to thank Westpac for providing the venue. </p> <p>\n\n\n\nRegistration Details:</p> <p>\n\nTPN is a non-profit organisation set up to support all Wellington testing. Confirming attendance at this event is a commitment to attend. Please do not book if you will not be attending.  Building access restrictions mean you must be in the door by 5.15pm.</p> <p>\n\nIITP members and non-members welcome.</p> <p>\n\nNOTE: Please pay $5 at the door (cash only)</p>",
+		"location": "Westpac, Level 1, 1 Grey Street, Wellington, nz",
+		"url": "http://www.meetup.com/Test-Professionals-Network-Wellington/events/221175833/",
+		"group": "Test Professionals Network, Wellington",
+		"groupURL": "http://www.meetup.com/Test-Professionals-Network-Wellington",
+		"startDate": "2015-03-30T11:00:00.000Z"
+	}
+	]
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"events": []
+},
+{
+	"name": "Wellington Makerspace",
+	"url": "http://www.meetup.com/wellingtonmakerspace",
+	"events": [
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-04-02T05:00:00+00:00",
+		"endTime": "2015-04-02T08:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/220900833/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-04-01T11:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Creating Graphics for Laser, CNC Router or Vinyl",
+		"startTime": "2015-04-23T06:00:00+00:00",
+		"endTime": "2015-04-23T09:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/6/8/8/0/600_365606752.jpeg\" /></p> <p>If you want to use a laser cutter, a vinyl cutter, a CNC Router a waterjet cutter, make stencils or need to print something very large. You're going to need to wrap your head around \"vector\" graphics\" and the pen tool.</p> <p>Using free/open source software we will learn the lingo and go through the process of creating your own vector graphic and how you can adapt an image from the web.</p> <p>So why not come along to this informal and friendly workshop and we'll teach you some basics that we use every day in our professional lives to make your projects very much easier - and certainly much cheaper!</p> <p><b>We'll cover some definite items including:</b></p> <p>- introducing you to some of the machines we have here [so you know what you're looking at and what they can do] and discussing other machines/processes you might never even have heard of - so your projects will be limitless!</p> <p>- We'll show you some cool [mainly free] software apps you can get to help you along your path to making heaven</p> <p>- We'll answer any specific questions you might have about how to do something - or a project we could use as a demo...</p> <p>- File types and what they are used for, the best for purpose, where and how to get pre-loved images</p> <p>-Vectorising and what that means for manufacture</p> <p><br/><b>What is an \"Un-workshop?\"</b></p> <p>Like an un-conference  - unstructured!</p> <p>\"Unstructured, What? Does that mean you're just making it up off the cuff?\"</p> <p>A more chilled-out playful experience then your standard rote teaching workshop. And more accomodating to where you want to take things.</p> <p>We guarantee you'll be more engaged and will get more out of the session if you're at the wheel so too speak...and to be honest it's how we do our projects.</p> <p> </p> <p><b>***This is highly recommended prior to attending the Intro to Laser Workshop [self use]</b> ***</p> <p> </p> <p>___________________________________________________________</p> <p><b>Investment:</b></p> <p>$40.</p> <p>Computers supplied but do feel free to bring along your own. We'll be using Adobe CS2 [downloadable from Adobe's website for free] and some other opensource stuff too.</p> <p>**Please note - we will need at least 6 attendees to go ahead with this workshop.</p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qbmkfjytgbfc/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-04-22T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Arduino Sparkkids | Ages 11-14",
+		"startTime": "2015-05-01T21:00:00+00:00",
+		"endTime": "2015-05-02T00:00:00+00:00",
+		"description": "<p><b>Register for this course online at <a href=\"http://makerspacetrust.org/registration/?action=evregister&amp;event_id=12\">makerspacetrust.org/registration/?action=evregister&amp;event_id=12</a></b></p> <p><b>4 Saturdays: 2 May – 23 May<br/>9.00am – 12.00pm<br/>Cost: $156 for all 4 sessions<br/></b></p> <p>Push the bounds with Arduino and electronics in this brand new course. Arduino is an accessible microcontroller that allows students to write code using the Arduino programming language and create circuits as they design their own automated machines. Over the course of four Saturdays students will build fun and interactive Arduino projects that will amaze and impress.</p> <p><br/><b>Important Information:</b></p> <p><br/>This class is for students ages 11-14 only.  Students must be enrolled via the above <a href=\"http://makerspacetrust.org/registration/?action=evregister&amp;event_id=12\">registration link</a>, marking you will attend on Meetup does not count as enrolling.  Please do not show up to class without registering first.   </p> <p>This programme runs for 4 consecutive Saturday's.  Students are encouraged to attend all four sessions.</p> <p><br/>If you have any questions about this programme, please contact Jess at <a href=\"mailto:[masked]\">[masked]</a></p>",
+		"location": "Wellington Makerspace Trust, Lvl 2, 6 Vivian Street, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/221292313/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-05-01T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-05-07T06:00:00+00:00",
+		"endTime": "2015-05-07T09:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qxzlghythbkb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-05-06T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Educators' Night",
+		"startTime": "2015-05-07T06:00:00+00:00",
+		"endTime": "2015-05-07T08:00:00+00:00",
+		"description": "<p><img src=\"http://photos3.meetupstatic.com/photos/event/6/2/7/c/600_435145212.jpeg\" /></p> <p>Teachers, librarians, and museum educators, join us for an evening of remixing and sharing.  This month's theme is Scratch and the MaKey MaKey.</p> <p><br/>This event is perfect for intrepid educators looking to introduce video game programming and maker activities into their classroom, but it is also a chance for more experienced educators to share their knowledge with peers while picking up some new tips and tricks along the way.</p> <p><b>• 6.00 Everyone's A Maker</b></p> <p><b>• 6.20 Welcome</b></p> <p><b>• 6.30 Lightning Talks</b></p> <p><i>Already using Scratch or the MaKey MaKey?  Share how you are using these tools in your context.  Sign up <a href=\"https://docs.google.com/document/d/1o2XfFtjQMB3zcMg5EDNO6jx7ZO4a28PJpeQxW2uR0ak/edit\">here</a>.</i></p> <p><b>• 7.25 Mingling &amp; Idea Exchange</b></p> <p><i>Meet with other lone-nuts to exchange ideas and form new connections.</i></p> <p><br/><b>• 8.00 Close<br/></b></p> <p><b><br/></b></p> <p><a href=\"https://twitter.com/search?f=realtime&amp;q=%23ednightWgtn&amp;src=typd\">#EDNightWGTN </a></p> <p>\n\n\n<i>This event is made possible by Hack Miramar, Scots College, and the Wellington Makerspace Trust.</i></p>",
+		"location": "Scots College, Monorgan Road, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/221088554/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-05-06T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to 3D Printing",
+		"startTime": "2015-05-14T06:00:00+00:00",
+		"endTime": "2015-05-14T09:00:00+00:00",
+		"description": "<p><b>Fancy doing some 3D printing?</b></p> <p><b>Have a project you need to get printed?</b></p> <p><b>Just curious and want top know what the heck it's all about?</b></p> <p> </p> <p><img src=\"http://photos3.meetupstatic.com/photos/event/5/1/7/4/600_283640852.jpeg\" /></p> <p>Well come along, chill out with us and learn the mechanics of using the world famous UP! 3D printer and afterwards you'll be able to use them whenever you like!</p> <p><b>We'll cover general things like:</b></p> <p>Getting [nice] models for free! [or even nicer paid ones]</p> <p>Where to start with CAD files. Some free software we recommend and use.</p> <p>How to cleanup a mesh and import into the UP! Software ready for printing</p> <p>Materials and types of 3D printers [there are many non-plastic printers available too!]</p> <p>Common faults and remedies</p> <p> </p> <p><b>and specific pointers:</b></p> <p>Calibrating/Setting the printer for printing</p> <p>What to check so you don't make expensive birds nests!</p> <p>Little tricks for great prints</p> <p>Machine checks - maintenance pointers</p> <p> </p> <p><b>Please note</b> - This is a workshop for learning <b>how to setup the machine and general printing</b> - not a 'get a print done on the night' -  3D printing is a pretty long process and we just won't get time.</p> <p>Of course the printers will be running tho' as a demonstration</p> <p>________________________________________________________________</p> <p>Bring a PC-based [or windows emulated MAC] laptop and we'll give you a copy of the UP! software to cost your printing</p> <p>__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please RSVP by depositing <b>payment via this <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20Intro3DPrinting&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\">Paypal link</a><br/></b></p> <p><b>Please note we'll need a minimum of 7 RSVP's to proceed - so do check back with us at either the meetup contact,[masked] or [masked]<br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qgqwsgythbsb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-05-13T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Creating Graphics for Laser, CNC Router or Vinyl",
+		"startTime": "2015-05-28T06:00:00+00:00",
+		"endTime": "2015-05-28T09:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/6/8/8/0/600_365606752.jpeg\" /></p> <p>If you want to use a laser cutter, a vinyl cutter, a CNC Router a waterjet cutter, make stencils or need to print something very large. You're going to need to wrap your head around \"vector\" graphics\" and the pen tool.</p> <p>Using free/open source software we will learn the lingo and go through the process of creating your own vector graphic and how you can adapt an image from the web.</p> <p>So why not come along to this informal and friendly workshop and we'll teach you some basics that we use every day in our professional lives to make your projects very much easier - and certainly much cheaper!</p> <p><b>We'll cover some definite items including:</b></p> <p>- introducing you to some of the machines we have here [so you know what you're looking at and what they can do] and discussing other machines/processes you might never even have heard of - so your projects will be limitless!</p> <p>- We'll show you some cool [mainly free] software apps you can get to help you along your path to making heaven</p> <p>- We'll answer any specific questions you might have about how to do something - or a project we could use as a demo...</p> <p>- File types and what they are used for, the best for purpose, where and how to get pre-loved images</p> <p>-Vectorising and what that means for manufacture</p> <p><br/><b>What is an \"Un-workshop?\"</b></p> <p>Like an un-conference  - unstructured!</p> <p>\"Unstructured, What? Does that mean you're just making it up off the cuff?\"</p> <p>A more chilled-out playful experience then your standard rote teaching workshop. And more accomodating to where you want to take things.</p> <p>We guarantee you'll be more engaged and will get more out of the session if you're at the wheel so too speak...and to be honest it's how we do our projects.</p> <p> </p> <p><b>***This is highly recommended prior to attending the Intro to Laser Workshop [self use]</b> ***</p> <p> </p> <p>___________________________________________________________</p> <p><b>Investment:</b></p> <p>$40.</p> <p>Computers supplied but do feel free to bring along your own. We'll be using Adobe CS2 [downloadable from Adobe's website for free] and some other opensource stuff too.</p> <p>**Please note - we will need at least 6 attendees to go ahead with this workshop.</p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qbmkfjythblc/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-05-27T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-06-04T06:00:00+00:00",
+		"endTime": "2015-06-04T09:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qxzlghytjbgb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-06-03T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to 3D Printing",
+		"startTime": "2015-06-11T06:00:00+00:00",
+		"endTime": "2015-06-11T09:00:00+00:00",
+		"description": "<p><b>Fancy doing some 3D printing?</b></p> <p><b>Have a project you need to get printed?</b></p> <p><b>Just curious and want top know what the heck it's all about?</b></p> <p> </p> <p><img src=\"http://photos3.meetupstatic.com/photos/event/5/1/7/4/600_283640852.jpeg\" /></p> <p>Well come along, chill out with us and learn the mechanics of using the world famous UP! 3D printer and afterwards you'll be able to use them whenever you like!</p> <p><b>We'll cover general things like:</b></p> <p>Getting [nice] models for free! [or even nicer paid ones]</p> <p>Where to start with CAD files. Some free software we recommend and use.</p> <p>How to cleanup a mesh and import into the UP! Software ready for printing</p> <p>Materials and types of 3D printers [there are many non-plastic printers available too!]</p> <p>Common faults and remedies</p> <p> </p> <p><b>and specific pointers:</b></p> <p>Calibrating/Setting the printer for printing</p> <p>What to check so you don't make expensive birds nests!</p> <p>Little tricks for great prints</p> <p>Machine checks - maintenance pointers</p> <p> </p> <p><b>Please note</b> - This is a workshop for learning <b>how to setup the machine and general printing</b> - not a 'get a print done on the night' -  3D printing is a pretty long process and we just won't get time.</p> <p>Of course the printers will be running tho' as a demonstration</p> <p>________________________________________________________________</p> <p>Bring a PC-based [or windows emulated MAC] laptop and we'll give you a copy of the UP! software to cost your printing</p> <p>__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please RSVP by depositing <b>payment via this <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20Intro3DPrinting&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\">Paypal link</a><br/></b></p> <p><b>Please note we'll need a minimum of 7 RSVP's to proceed - so do check back with us at either the meetup contact,[masked] or [masked]<br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qgqwsgytjbpb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-06-10T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Creating Graphics for Laser, CNC Router or Vinyl",
+		"startTime": "2015-06-25T06:00:00+00:00",
+		"endTime": "2015-06-25T09:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/6/8/8/0/600_365606752.jpeg\" /></p> <p>If you want to use a laser cutter, a vinyl cutter, a CNC Router a waterjet cutter, make stencils or need to print something very large. You're going to need to wrap your head around \"vector\" graphics\" and the pen tool.</p> <p>Using free/open source software we will learn the lingo and go through the process of creating your own vector graphic and how you can adapt an image from the web.</p> <p>So why not come along to this informal and friendly workshop and we'll teach you some basics that we use every day in our professional lives to make your projects very much easier - and certainly much cheaper!</p> <p><b>We'll cover some definite items including:</b></p> <p>- introducing you to some of the machines we have here [so you know what you're looking at and what they can do] and discussing other machines/processes you might never even have heard of - so your projects will be limitless!</p> <p>- We'll show you some cool [mainly free] software apps you can get to help you along your path to making heaven</p> <p>- We'll answer any specific questions you might have about how to do something - or a project we could use as a demo...</p> <p>- File types and what they are used for, the best for purpose, where and how to get pre-loved images</p> <p>-Vectorising and what that means for manufacture</p> <p><br/><b>What is an \"Un-workshop?\"</b></p> <p>Like an un-conference  - unstructured!</p> <p>\"Unstructured, What? Does that mean you're just making it up off the cuff?\"</p> <p>A more chilled-out playful experience then your standard rote teaching workshop. And more accomodating to where you want to take things.</p> <p>We guarantee you'll be more engaged and will get more out of the session if you're at the wheel so too speak...and to be honest it's how we do our projects.</p> <p> </p> <p><b>***This is highly recommended prior to attending the Intro to Laser Workshop [self use]</b> ***</p> <p> </p> <p>___________________________________________________________</p> <p><b>Investment:</b></p> <p>$40.</p> <p>Computers supplied but do feel free to bring along your own. We'll be using Adobe CS2 [downloadable from Adobe's website for free] and some other opensource stuff too.</p> <p>**Please note - we will need at least 6 attendees to go ahead with this workshop.</p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qbmkfjytjbhc/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-06-24T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-07-02T06:00:00+00:00",
+		"endTime": "2015-07-02T09:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qxzlghytkbdb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-07-01T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to 3D Printing",
+		"startTime": "2015-07-09T06:00:00+00:00",
+		"endTime": "2015-07-09T09:00:00+00:00",
+		"description": "<p><b>Fancy doing some 3D printing?</b></p> <p><b>Have a project you need to get printed?</b></p> <p><b>Just curious and want top know what the heck it's all about?</b></p> <p> </p> <p><img src=\"http://photos3.meetupstatic.com/photos/event/5/1/7/4/600_283640852.jpeg\" /></p> <p>Well come along, chill out with us and learn the mechanics of using the world famous UP! 3D printer and afterwards you'll be able to use them whenever you like!</p> <p><b>We'll cover general things like:</b></p> <p>Getting [nice] models for free! [or even nicer paid ones]</p> <p>Where to start with CAD files. Some free software we recommend and use.</p> <p>How to cleanup a mesh and import into the UP! Software ready for printing</p> <p>Materials and types of 3D printers [there are many non-plastic printers available too!]</p> <p>Common faults and remedies</p> <p> </p> <p><b>and specific pointers:</b></p> <p>Calibrating/Setting the printer for printing</p> <p>What to check so you don't make expensive birds nests!</p> <p>Little tricks for great prints</p> <p>Machine checks - maintenance pointers</p> <p> </p> <p><b>Please note</b> - This is a workshop for learning <b>how to setup the machine and general printing</b> - not a 'get a print done on the night' -  3D printing is a pretty long process and we just won't get time.</p> <p>Of course the printers will be running tho' as a demonstration</p> <p>________________________________________________________________</p> <p>Bring a PC-based [or windows emulated MAC] laptop and we'll give you a copy of the UP! software to cost your printing</p> <p>__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please RSVP by depositing <b>payment via this <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20Intro3DPrinting&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\">Paypal link</a><br/></b></p> <p><b>Please note we'll need a minimum of 7 RSVP's to proceed - so do check back with us at either the meetup contact,[masked] or [masked]<br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qgqwsgytkbmb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-07-08T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Creating Graphics for Laser, CNC Router or Vinyl",
+		"startTime": "2015-07-23T06:00:00+00:00",
+		"endTime": "2015-07-23T09:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/6/8/8/0/600_365606752.jpeg\" /></p> <p>If you want to use a laser cutter, a vinyl cutter, a CNC Router a waterjet cutter, make stencils or need to print something very large. You're going to need to wrap your head around \"vector\" graphics\" and the pen tool.</p> <p>Using free/open source software we will learn the lingo and go through the process of creating your own vector graphic and how you can adapt an image from the web.</p> <p>So why not come along to this informal and friendly workshop and we'll teach you some basics that we use every day in our professional lives to make your projects very much easier - and certainly much cheaper!</p> <p><b>We'll cover some definite items including:</b></p> <p>- introducing you to some of the machines we have here [so you know what you're looking at and what they can do] and discussing other machines/processes you might never even have heard of - so your projects will be limitless!</p> <p>- We'll show you some cool [mainly free] software apps you can get to help you along your path to making heaven</p> <p>- We'll answer any specific questions you might have about how to do something - or a project we could use as a demo...</p> <p>- File types and what they are used for, the best for purpose, where and how to get pre-loved images</p> <p>-Vectorising and what that means for manufacture</p> <p><br/><b>What is an \"Un-workshop?\"</b></p> <p>Like an un-conference  - unstructured!</p> <p>\"Unstructured, What? Does that mean you're just making it up off the cuff?\"</p> <p>A more chilled-out playful experience then your standard rote teaching workshop. And more accomodating to where you want to take things.</p> <p>We guarantee you'll be more engaged and will get more out of the session if you're at the wheel so too speak...and to be honest it's how we do our projects.</p> <p> </p> <p><b>***This is highly recommended prior to attending the Intro to Laser Workshop [self use]</b> ***</p> <p> </p> <p>___________________________________________________________</p> <p><b>Investment:</b></p> <p>$40.</p> <p>Computers supplied but do feel free to bring along your own. We'll be using Adobe CS2 [downloadable from Adobe's website for free] and some other opensource stuff too.</p> <p>**Please note - we will need at least 6 attendees to go ahead with this workshop.</p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qbmkfjytkbfc/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-07-22T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-08-06T06:00:00+00:00",
+		"endTime": "2015-08-06T09:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qxzlghytlbjb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-08-05T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to 3D Printing",
+		"startTime": "2015-08-13T06:00:00+00:00",
+		"endTime": "2015-08-13T09:00:00+00:00",
+		"description": "<p><b>Fancy doing some 3D printing?</b></p> <p><b>Have a project you need to get printed?</b></p> <p><b>Just curious and want top know what the heck it's all about?</b></p> <p> </p> <p><img src=\"http://photos3.meetupstatic.com/photos/event/5/1/7/4/600_283640852.jpeg\" /></p> <p>Well come along, chill out with us and learn the mechanics of using the world famous UP! 3D printer and afterwards you'll be able to use them whenever you like!</p> <p><b>We'll cover general things like:</b></p> <p>Getting [nice] models for free! [or even nicer paid ones]</p> <p>Where to start with CAD files. Some free software we recommend and use.</p> <p>How to cleanup a mesh and import into the UP! Software ready for printing</p> <p>Materials and types of 3D printers [there are many non-plastic printers available too!]</p> <p>Common faults and remedies</p> <p> </p> <p><b>and specific pointers:</b></p> <p>Calibrating/Setting the printer for printing</p> <p>What to check so you don't make expensive birds nests!</p> <p>Little tricks for great prints</p> <p>Machine checks - maintenance pointers</p> <p> </p> <p><b>Please note</b> - This is a workshop for learning <b>how to setup the machine and general printing</b> - not a 'get a print done on the night' -  3D printing is a pretty long process and we just won't get time.</p> <p>Of course the printers will be running tho' as a demonstration</p> <p>________________________________________________________________</p> <p>Bring a PC-based [or windows emulated MAC] laptop and we'll give you a copy of the UP! software to cost your printing</p> <p>__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please RSVP by depositing <b>payment via this <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20Intro3DPrinting&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\">Paypal link</a><br/></b></p> <p><b>Please note we'll need a minimum of 7 RSVP's to proceed - so do check back with us at either the meetup contact,[masked] or [masked]<br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qgqwsgytlbrb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-08-12T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Creating Graphics for Laser, CNC Router or Vinyl",
+		"startTime": "2015-08-27T06:00:00+00:00",
+		"endTime": "2015-08-27T09:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/6/8/8/0/600_365606752.jpeg\" /></p> <p>If you want to use a laser cutter, a vinyl cutter, a CNC Router a waterjet cutter, make stencils or need to print something very large. You're going to need to wrap your head around \"vector\" graphics\" and the pen tool.</p> <p>Using free/open source software we will learn the lingo and go through the process of creating your own vector graphic and how you can adapt an image from the web.</p> <p>So why not come along to this informal and friendly workshop and we'll teach you some basics that we use every day in our professional lives to make your projects very much easier - and certainly much cheaper!</p> <p><b>We'll cover some definite items including:</b></p> <p>- introducing you to some of the machines we have here [so you know what you're looking at and what they can do] and discussing other machines/processes you might never even have heard of - so your projects will be limitless!</p> <p>- We'll show you some cool [mainly free] software apps you can get to help you along your path to making heaven</p> <p>- We'll answer any specific questions you might have about how to do something - or a project we could use as a demo...</p> <p>- File types and what they are used for, the best for purpose, where and how to get pre-loved images</p> <p>-Vectorising and what that means for manufacture</p> <p><br/><b>What is an \"Un-workshop?\"</b></p> <p>Like an un-conference  - unstructured!</p> <p>\"Unstructured, What? Does that mean you're just making it up off the cuff?\"</p> <p>A more chilled-out playful experience then your standard rote teaching workshop. And more accomodating to where you want to take things.</p> <p>We guarantee you'll be more engaged and will get more out of the session if you're at the wheel so too speak...and to be honest it's how we do our projects.</p> <p> </p> <p><b>***This is highly recommended prior to attending the Intro to Laser Workshop [self use]</b> ***</p> <p> </p> <p>___________________________________________________________</p> <p><b>Investment:</b></p> <p>$40.</p> <p>Computers supplied but do feel free to bring along your own. We'll be using Adobe CS2 [downloadable from Adobe's website for free] and some other opensource stuff too.</p> <p>**Please note - we will need at least 6 attendees to go ahead with this workshop.</p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qbmkfjytlbkc/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-08-26T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-09-03T06:00:00+00:00",
+		"endTime": "2015-09-03T09:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qxzlghytmbfb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-09-02T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to 3D Printing",
+		"startTime": "2015-09-10T06:00:00+00:00",
+		"endTime": "2015-09-10T09:00:00+00:00",
+		"description": "<p><b>Fancy doing some 3D printing?</b></p> <p><b>Have a project you need to get printed?</b></p> <p><b>Just curious and want top know what the heck it's all about?</b></p> <p> </p> <p><img src=\"http://photos3.meetupstatic.com/photos/event/5/1/7/4/600_283640852.jpeg\" /></p> <p>Well come along, chill out with us and learn the mechanics of using the world famous UP! 3D printer and afterwards you'll be able to use them whenever you like!</p> <p><b>We'll cover general things like:</b></p> <p>Getting [nice] models for free! [or even nicer paid ones]</p> <p>Where to start with CAD files. Some free software we recommend and use.</p> <p>How to cleanup a mesh and import into the UP! Software ready for printing</p> <p>Materials and types of 3D printers [there are many non-plastic printers available too!]</p> <p>Common faults and remedies</p> <p> </p> <p><b>and specific pointers:</b></p> <p>Calibrating/Setting the printer for printing</p> <p>What to check so you don't make expensive birds nests!</p> <p>Little tricks for great prints</p> <p>Machine checks - maintenance pointers</p> <p> </p> <p><b>Please note</b> - This is a workshop for learning <b>how to setup the machine and general printing</b> - not a 'get a print done on the night' -  3D printing is a pretty long process and we just won't get time.</p> <p>Of course the printers will be running tho' as a demonstration</p> <p>________________________________________________________________</p> <p>Bring a PC-based [or windows emulated MAC] laptop and we'll give you a copy of the UP! software to cost your printing</p> <p>__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please RSVP by depositing <b>payment via this <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20Intro3DPrinting&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\">Paypal link</a><br/></b></p> <p><b>Please note we'll need a minimum of 7 RSVP's to proceed - so do check back with us at either the meetup contact,[masked] or [masked]<br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qgqwsgytmbnb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-09-09T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Creating Graphics for Laser, CNC Router or Vinyl",
+		"startTime": "2015-09-24T06:00:00+00:00",
+		"endTime": "2015-09-24T09:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/6/8/8/0/600_365606752.jpeg\" /></p> <p>If you want to use a laser cutter, a vinyl cutter, a CNC Router a waterjet cutter, make stencils or need to print something very large. You're going to need to wrap your head around \"vector\" graphics\" and the pen tool.</p> <p>Using free/open source software we will learn the lingo and go through the process of creating your own vector graphic and how you can adapt an image from the web.</p> <p>So why not come along to this informal and friendly workshop and we'll teach you some basics that we use every day in our professional lives to make your projects very much easier - and certainly much cheaper!</p> <p><b>We'll cover some definite items including:</b></p> <p>- introducing you to some of the machines we have here [so you know what you're looking at and what they can do] and discussing other machines/processes you might never even have heard of - so your projects will be limitless!</p> <p>- We'll show you some cool [mainly free] software apps you can get to help you along your path to making heaven</p> <p>- We'll answer any specific questions you might have about how to do something - or a project we could use as a demo...</p> <p>- File types and what they are used for, the best for purpose, where and how to get pre-loved images</p> <p>-Vectorising and what that means for manufacture</p> <p><br/><b>What is an \"Un-workshop?\"</b></p> <p>Like an un-conference  - unstructured!</p> <p>\"Unstructured, What? Does that mean you're just making it up off the cuff?\"</p> <p>A more chilled-out playful experience then your standard rote teaching workshop. And more accomodating to where you want to take things.</p> <p>We guarantee you'll be more engaged and will get more out of the session if you're at the wheel so too speak...and to be honest it's how we do our projects.</p> <p> </p> <p><b>***This is highly recommended prior to attending the Intro to Laser Workshop [self use]</b> ***</p> <p> </p> <p>___________________________________________________________</p> <p><b>Investment:</b></p> <p>$40.</p> <p>Computers supplied but do feel free to bring along your own. We'll be using Adobe CS2 [downloadable from Adobe's website for free] and some other opensource stuff too.</p> <p>**Please note - we will need at least 6 attendees to go ahead with this workshop.</p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qbmkfjytmbgc/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-09-23T12:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-10-01T05:00:00+00:00",
+		"endTime": "2015-10-01T08:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qxzlghytnbcb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-09-30T11:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to 3D Printing",
+		"startTime": "2015-10-08T05:00:00+00:00",
+		"endTime": "2015-10-08T08:00:00+00:00",
+		"description": "<p><b>Fancy doing some 3D printing?</b></p> <p><b>Have a project you need to get printed?</b></p> <p><b>Just curious and want top know what the heck it's all about?</b></p> <p> </p> <p><img src=\"http://photos3.meetupstatic.com/photos/event/5/1/7/4/600_283640852.jpeg\" /></p> <p>Well come along, chill out with us and learn the mechanics of using the world famous UP! 3D printer and afterwards you'll be able to use them whenever you like!</p> <p><b>We'll cover general things like:</b></p> <p>Getting [nice] models for free! [or even nicer paid ones]</p> <p>Where to start with CAD files. Some free software we recommend and use.</p> <p>How to cleanup a mesh and import into the UP! Software ready for printing</p> <p>Materials and types of 3D printers [there are many non-plastic printers available too!]</p> <p>Common faults and remedies</p> <p> </p> <p><b>and specific pointers:</b></p> <p>Calibrating/Setting the printer for printing</p> <p>What to check so you don't make expensive birds nests!</p> <p>Little tricks for great prints</p> <p>Machine checks - maintenance pointers</p> <p> </p> <p><b>Please note</b> - This is a workshop for learning <b>how to setup the machine and general printing</b> - not a 'get a print done on the night' -  3D printing is a pretty long process and we just won't get time.</p> <p>Of course the printers will be running tho' as a demonstration</p> <p>________________________________________________________________</p> <p>Bring a PC-based [or windows emulated MAC] laptop and we'll give you a copy of the UP! software to cost your printing</p> <p>__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please RSVP by depositing <b>payment via this <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20Intro3DPrinting&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\">Paypal link</a><br/></b></p> <p><b>Please note we'll need a minimum of 7 RSVP's to proceed - so do check back with us at either the meetup contact,[masked] or [masked]<br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qgqwsgytnblb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-10-07T11:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Creating Graphics for Laser, CNC Router or Vinyl",
+		"startTime": "2015-10-22T05:00:00+00:00",
+		"endTime": "2015-10-22T08:00:00+00:00",
+		"description": "<p><img src=\"http://photos4.meetupstatic.com/photos/event/6/8/8/0/600_365606752.jpeg\" /></p> <p>If you want to use a laser cutter, a vinyl cutter, a CNC Router a waterjet cutter, make stencils or need to print something very large. You're going to need to wrap your head around \"vector\" graphics\" and the pen tool.</p> <p>Using free/open source software we will learn the lingo and go through the process of creating your own vector graphic and how you can adapt an image from the web.</p> <p>So why not come along to this informal and friendly workshop and we'll teach you some basics that we use every day in our professional lives to make your projects very much easier - and certainly much cheaper!</p> <p><b>We'll cover some definite items including:</b></p> <p>- introducing you to some of the machines we have here [so you know what you're looking at and what they can do] and discussing other machines/processes you might never even have heard of - so your projects will be limitless!</p> <p>- We'll show you some cool [mainly free] software apps you can get to help you along your path to making heaven</p> <p>- We'll answer any specific questions you might have about how to do something - or a project we could use as a demo...</p> <p>- File types and what they are used for, the best for purpose, where and how to get pre-loved images</p> <p>-Vectorising and what that means for manufacture</p> <p><br/><b>What is an \"Un-workshop?\"</b></p> <p>Like an un-conference  - unstructured!</p> <p>\"Unstructured, What? Does that mean you're just making it up off the cuff?\"</p> <p>A more chilled-out playful experience then your standard rote teaching workshop. And more accomodating to where you want to take things.</p> <p>We guarantee you'll be more engaged and will get more out of the session if you're at the wheel so too speak...and to be honest it's how we do our projects.</p> <p> </p> <p><b>***This is highly recommended prior to attending the Intro to Laser Workshop [self use]</b> ***</p> <p> </p> <p>___________________________________________________________</p> <p><b>Investment:</b></p> <p>$40.</p> <p>Computers supplied but do feel free to bring along your own. We'll be using Adobe CS2 [downloadable from Adobe's website for free] and some other opensource stuff too.</p> <p>**Please note - we will need at least 6 attendees to go ahead with this workshop.</p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qbmkfjytnbdc/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-10-21T11:00:00.000Z"
+	},
+	{
+		"title": "Wellington Makerspace: Intro to Laser Cutting & Engraving | Adults",
+		"startTime": "2015-11-05T05:00:00+00:00",
+		"endTime": "2015-11-05T08:00:00+00:00",
+		"description": "<p>Lasers are fun! And they help you make cool stuff! Think jewellery, signs, buttons, frames, boxes, toys and all manner of cool structures! Put family photographs on wood or glass....but don't worry if you've never seen a laser cutter in your life - as you're in good hands - join the group and learn how to design and cut your very own!</p> <p><br/>At the end of the session, you'll get to take away both your creation and the knowledge of how to set up your next design and safe use of any laser cutter on your own projects so you'll be confident in driving the beasties!</p> <p><br/>&amp; just look how happy our recent Alumna, Louise looks...</p> <p><img src=\"http://photos1.meetupstatic.com/photos/event/e/0/5/8/600_397557432.jpeg\" /></p> <p>\n\n\n__________________________________________________________</p> <p><b>Payment:</b></p> <p><b>Cost: $40.<br/></b></p> <p>To <b>absolutely guarantee</b> your place for the workshop, please advise RSVP by depositing <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=info@wellingtonmakerspace.com&amp;amount=40.00&amp;currency_code=NZD&amp;item_name=Payment%20for%20IntroToLasers&amp;shipping=0&amp;pbtype=service&amp;bn=Xero_Acct_ST\"><b>payment via this Paypal link</b></a> as we have had to implement this policy as non-payment RSVPs and non-attendance means we incur large costs in putting on a workshop<b>. If you use this link above please send us an email or meetup comment saying so, as your name will have to manually added to the RSVP list :)<br/></b></p> <p><b>Please also note that we need a minimum of 6 people to proceed with this workshop.</b></p> <p><b><br/></b></p>",
+		"location": "The Wellington Makerspace, 6 Vivian St, Wellington, nz",
+		"url": "http://www.meetup.com/wellingtonmakerspace/events/qxzlghytpbhb/",
+		"group": "Wellington Makerspace",
+		"groupURL": "http://www.meetup.com/wellingtonmakerspace",
+		"startDate": "2015-11-04T11:00:00.000Z"
+	}
+	]
+}
+]
 };
 	</script>
+
+	<script id="sourceTemplate" type="text/x-handlebars-template">
+		{{#each events}}
+			{{#if name}}
+				<div class="pure-u-1-3 sourcesGridCell">
+					<input type="checkbox" id="{{formattedName}}" data-sourceid="{{name}}"" class="u-hidden sourcesCheck js-sourceCheck" checked="checked">
+					<span class="sourcesCheckDisplay"></span>
+					<label class="sourcesLabel" for="{{formattedName}}">{{name}}</label>
+				</div>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<script id="month" type="text/x-handlebars-template">
+		{{#each months}}
+			<h2 class="title">{{name}}</h2>
+			{{#each events}}
+				<a href="{{url}}" class="lineItem" data-id="{{group}}">
+					<span class="lineItem-day">{{day}}</span>
+					<span class="lineItem-date">{{date}}<span class="u-hidden">{{month}}</span></span>
+					<span class="lineItem-time">{{time}}</span>
+					<span class="lineItem-group">{{group}}</span>
+					<span class="lineItem-title">{{titleName}}</span>
+					<span class="lineItem-location">{{location}}</span>
+				</div>
+			{{/each}}
+		{{/each}}
+
+		<div class="subText">
+			<p>That's it! Those are all the design events currently listed.</p>
+			<p>Check back whenever for updates.</p>
+		</div>
+	</script>
+
+
+	<script src="public/scripts/dist/libs.js"></script>
+	<script src="public/scripts/dist/script.js"></script>
 
 	<footer class="footer"></footer>
 
