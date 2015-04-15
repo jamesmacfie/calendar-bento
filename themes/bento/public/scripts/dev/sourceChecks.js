@@ -96,7 +96,7 @@ $(function() {
 												$(source.totalCheck).on('change', source, onTotalCheckChangeHander);
 										});
 
-										$('#close-section-customise').on('click', sources, this.onCloseClickHandler);
+										$('.js-updateSources').on('click', sources, this.onCloseClickHandler);
 										$(window).on('resize', _.debounce(this.sourceColumnSetup, 10));
 								},
 								/* Handler for closing the modal. Refreshes the grid of events on the main page */

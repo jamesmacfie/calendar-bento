@@ -48,7 +48,7 @@
 			</div>
 			<footer class="modalFooter">
 				<div class="modalFooter--buttonHolder">
-					<button class="button button-primary" id="close-section-customise">Update</button>
+					<button class="button button-primary js-updateSources js-closeDialog" aria-controls="section-customise">Update</button>
 					<button class="button button-secondary js-closeDialog" aria-controls="section-customise">Cancel</button>
 				</div>
 			</footer>
@@ -892,17 +892,19 @@
 
 	<script id="month" type="text/x-handlebars-template">
 		{{#each months}}
-			<h2 class="title">{{name}}</h2>
-			{{#each events}}
-				<a href="{{url}}" class="lineItem" data-id="{{group}}">
-					<span class="lineItem-day">{{day}}</span>
-					<span class="lineItem-date">{{date}}<span class="u-hidden">{{month}}</span></span>
-					<span class="lineItem-time">{{time}}</span>
-					<span class="lineItem-group">{{group}}</span>
-					<span class="lineItem-title">{{titleName}}</span>
-					<span class="lineItem-location">{{location}}</span>
-				</div>
-			{{/each}}
+			<div>
+				<h2 class="title">{{name}}</h2>
+				{{#each events}}
+					<a href="{{url}}" class="lineItem" data-id="{{group}}">
+						<span class="lineItem-day">{{day}}</span>
+						<span class="lineItem-date">{{date}}<span class="u-hidden">{{month}}</span></span>
+						<span class="lineItem-time">{{time}}</span>
+						<span class="lineItem-group">{{group}}</span>
+						<span class="lineItem-title">{{titleName}}</span>
+						<span class="lineItem-location">{{location}}</span>
+					</a>
+				{{/each}}
+			</div>
 		{{/each}}
 
 		<div class="subText">

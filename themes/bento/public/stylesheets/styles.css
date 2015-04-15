@@ -1210,6 +1210,7 @@ p {
   /* Overriding the specificity of the .lineItem-* classes. */
 }
 .lineItem:hover, .lineItem:focus, .lineItem:active {
+  color: #fff;
   background-color: #e52a08;
 }
 .lineItem:hover span, .lineItem:focus span, .lineItem:active span {
@@ -1222,6 +1223,10 @@ p {
   position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.lineItem-group {
+  color: #e52a08;
 }
 
 /* Shared placedhlders for common metadata properties */

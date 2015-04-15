@@ -66,6 +66,7 @@
 		}
 
 		&:hover, &:focus, &:active {
+				color: #fff;
 				background-color: $primary;
 
 				span {
@@ -80,6 +81,10 @@
 				text-overflow: ellipsis;
 				white-space: nowrap;
 		}
+}
+
+.lineItem-group {
+	color: $primary;
 }
 
 /* Shared placedhlders for common metadata properties */
