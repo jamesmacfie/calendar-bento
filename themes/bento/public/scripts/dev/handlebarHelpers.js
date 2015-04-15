@@ -10,6 +10,14 @@ Handlebars.registerHelper('month', function() {
 	return new moment(this.startTime).format('MMMM');
 });
 
+Handlebars.registerHelper('group', function() {
+	var title = Handlebars.escapeExpression(this.title);
+
+	return new Handlebars.SafeString(
+		title.substring(0, title.indexOf(':') -1)
+	);
+});
+
 Handlebars.registerHelper('time', function() {
 	return new moment(this.startTime).format('h:mma');
 });

@@ -1,0 +1,34 @@
+<script id="sourceTemplate" type="text/x-handlebars-template">
+	{{#each events}}
+	{{#if name}}
+	<div class="pure-u-1-3 sourcesGridCell">
+		<input type="checkbox" id="{{formattedName}}" data-sourceid="{{name}}" class="u-hidden sourcesCheck js-sourceCheck" checked="checked">
+		<span class="sourcesCheckDisplay"></span>
+		<label class="sourcesLabel" for="{{formattedName}}">{{name}}</label>
+	</div>
+	{{/if}}
+	{{/each}}
+</script>
+
+<script id="month" type="text/x-handlebars-template">
+	{{#each months}}
+	<div>
+		<h2 class="title">{{name}}</h2>
+		{{#each events}}
+		<a href="{{url}}" class="lineItem" data-id="{{group}}">
+			<span class="lineItem-day">{{day}}</span>
+			<span class="lineItem-date">{{date}}<span class="u-hidden">{{month}}</span></span>
+			<span class="lineItem-time">{{time}}</span>
+			<span class="lineItem-group">{{group}}</span>
+			<span class="lineItem-title">{{titleName}}</span>
+			<span class="lineItem-location">{{location}}</span>
+		</a>
+		{{/each}}
+	</div>
+	{{/each}}
+
+	<div class="subText">
+		<p>That's it! Those are all the design events currently listed.</p>
+		<p>Check back whenever for updates.</p>
+	</div>
+</script>

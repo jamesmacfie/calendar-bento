@@ -8,18 +8,11 @@
 
 
 			<fieldset class="sources js-source">
-				<legend class="sourcesTitle" aria-live="polite">Sources <span class="sourcesSelected js-sourceTotalCount">(7 of 9 selected)</span></legend>
+				<legend class="sourcesTitle" aria-live="polite">Sources <span class="sourcesSelected js-sourceTotalCount"></span></legend>
 				<input type="checkbox" id="allSources" class="u-hidden sourcesCheck js-sourceTotalCheck" checked="checked">
 				<span class="sourcesCheckDisplay sourcesCheckDisplay-circle"></span>
 				<label class="sourcesLabel" for="allSources"><strong>All sources</strong></label>
-				<div class="pure-g sourcesGrid" id="sourceTemplateContainer">
-						<div id="sourceTemplate">
-								<div class="pure-u-1-3 sourcesGridCell">
-										<input type="checkbox" id="{{formattedName}}" class="u-hidden sourcesCheck js-sourceCheck" checked="checked">
-										<span class="sourcesCheckDisplay"></span>
-										<label class="sourcesLabel" for="{{formattedName}}">{{name}}</label>
-								</div>
-						</div>
+				<div class="pure-g sourcesGrid" id="sourceContent">
 				</div>
 			</fieldset>
 

@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <title><%= page_title %></title>
-    <link rel="stylesheet" href="/stylesheets/styles.css">
+	<meta charset="utf-8">
+	<title><%= page_title %></title>
+		<link rel="stylesheet" href="/stylesheets/styles.css">
 
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  <body>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	<body>
 
-  <%= erb :header %>
+	<%= erb :header %>
 
-  <!-- Events -->
-  <%= yield %>
+	<main class="l-mainContent"role="main" aria-labelledby="calender-label">
+		<div id="content">
 
-  <%= erb :customise %>
+		</div>
+	</main>
 
-  <script src="/scripts/dist/libs.js"></script>
-  <script src="/scripts/dist/script.js"></script>
+	<%= erb :sources %>
+	<%= erb :templates %>
 
-  <footer class="footer"></footer>
+	<script>
+		/*
+		 * Global object containing the raw data for the events and sources
+		 */
+		window.CAL = <%= @calendar.json_feed %>
+	</script>
 
-  <script>
-    /*
-     * Global object containing the raw data for the events and sources
-     */
-    var CAL = <%= @calendar.json_feed %>
-  </script>
-  
+	<script src="/scripts/dist/libs.js"></script>
+	<script src="/scripts/dist/script.js"></script>
+
+	<footer class="footer"></footer>
+
+
 </body>
 </html>

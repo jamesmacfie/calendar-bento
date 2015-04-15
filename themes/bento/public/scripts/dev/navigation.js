@@ -56,8 +56,6 @@ $(function() {
 								},
 								/* Takes care of closing the related dialog */
 								closeDialogClickHandler: function(event) {
-										console.log('click');
-										
 										var target = event.target;
 										this.hideDialog(target);
 								},
